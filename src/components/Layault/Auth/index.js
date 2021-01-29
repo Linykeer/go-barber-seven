@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-import { Wrraper } from './styles';
+import { Wrraper,Content } from './styles';
 
 function AuthLayoult({ children }) {
-  return <Wrraper>{children}</Wrraper>;
+  return <Wrraper>
+          <Content>
+            {children}
+          </Content>
+        </Wrraper>;
 }
 
 export default AuthLayoult;

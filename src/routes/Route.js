@@ -5,12 +5,14 @@ import PropTypes from 'prop-types';
 import AuthLayoult from '../components/Layault/Auth';
 import DefaultLayoult from '../components/Layault/Default';
 
+import { store } from '../store';
+
 export default function RoutePrivate({
 component: Component,
 isPrivate,
 ...rest
 }) {
-   const user = false;
+   const { user } = store.getState().auth;
 
    if(!user && isPrivate) {
        return <Redirect to="/" />
